@@ -1,0 +1,6 @@
+---
+:enabled: true
+:hello_greeting: 'O hai!'
+:bmi_endpoint: 'http://google.com'
+:bmi_username: 'user'
+:bmi_password: 'pass'
