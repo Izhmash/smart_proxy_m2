@@ -12,18 +12,16 @@ module Proxy::M2
     end
 
 		def list_images(project)
-			# project.inspect
 			uri = URI.parse(Proxy::M2::Plugin.settings.bmi_endpoint + '/list_images/')
 			post = Net::HTTP::Post.new(uri, 'content-type' => 'application/x-www-form-urlencoded')
 			post.basic_auth Proxy::M2::Plugin.settings.bmi_username, 
 											Proxy::M2::Plugin.settings.bmi_password
 
 			Net::HTTP.new(uri.host, uri.port).start do |http|
-				response = http.request(post, project)
+				project = "bmi_infra"
+				response = http.request(post, "project=" + project)
 				response.read_body
 			end
-
 		end
-
   end
 end

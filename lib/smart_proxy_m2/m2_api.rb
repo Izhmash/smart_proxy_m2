@@ -14,7 +14,7 @@ module Proxy::M2
     end
 
 		get '/image_list' do
-			Proxy::M2.list_images(request.body.read)
+			Proxy::M2.list_images(params[:project])
 		end
   end
 end
