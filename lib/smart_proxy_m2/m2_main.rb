@@ -11,7 +11,7 @@ module Proxy::M2
       Proxy::M2::Plugin.settings.hello_greeting
     end
 
-		def list_images(project)
+		def get_images(project)
 			uri = URI.parse(Proxy::M2::Plugin.settings.bmi_endpoint + '/list_images/')
 			post = Net::HTTP::Post.new(uri, 'content-type' => 'application/x-www-form-urlencoded')
 			post.basic_auth Proxy::M2::Plugin.settings.bmi_username, 
@@ -23,5 +23,11 @@ module Proxy::M2
 				response.read_body
 			end
 		end
+
+		def get_iscsi_target(project, img)
+			# Placeholder for new M2 "pro" command:
+			:sample_target
+		end
   end
+
 end

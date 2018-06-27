@@ -14,7 +14,12 @@ module Proxy::M2
     end
 
 		get '/image_list' do
-			Proxy::M2.list_images(params[:project])
+			Proxy::M2.get_images(params[:project])
 		end
+
+		get '/iscsi_target' do
+			Proxy::M2.get_iscsi_target(params[:project], params[:image])
+		end
+
   end
 end
