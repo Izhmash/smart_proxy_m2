@@ -18,7 +18,6 @@ module Proxy::M2
 											Proxy::M2::Plugin.settings.bmi_password
 
 			Net::HTTP.new(uri.host, uri.port).start do |http|
-				project = "bmi_infra"
 				response = http.request(post, "project=" + project)
 				response.read_body
 			end
@@ -26,7 +25,7 @@ module Proxy::M2
 
 		def get_iscsi_target(project, img)
 			# Placeholder for new M2 "pro" command:
-			:sample_target
+			return JSON['iscsi_target' => "#{project}; #{img}; sample_target"]
 		end
   end
 
