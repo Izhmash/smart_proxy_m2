@@ -7,8 +7,8 @@ module Proxy::M2
 
   class << self
 
-    def say_hello
-      Proxy::M2::Plugin.settings.hello_greeting
+    def test
+      Proxy::M2::Plugin.settings.test_msg
     end
 
 		def get_images(project)
@@ -25,7 +25,8 @@ module Proxy::M2
 
 		def get_iscsi_target(project, img)
 			# Placeholder for new M2 "pro" command:
-			return JSON['iscsi_target' => "#{project}; #{img}; sample_target"]
+			#return JSON['iscsi_target' => "#{project}; #{img}; sample_target"]
+			return "#{project}-#{img}-sample_target"
 		end
   end
 

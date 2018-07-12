@@ -9,8 +9,8 @@ module Proxy::M2
     include ::Proxy::Log
     helpers ::Proxy::Helpers
 
-    get '/hello' do
-      Proxy::M2.say_hello
+    get '/test' do
+      Proxy::M2.test
     end
 
 		get '/image_list' do
