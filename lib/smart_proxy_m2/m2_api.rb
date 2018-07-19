@@ -21,5 +21,9 @@ module Proxy::M2
 			Proxy::M2.get_iscsi_target(params[:project], params[:image])
 		end
 
+    get '/snapshot_list' do
+      Proxy::M2.get_snapshots(params[:project])
+    end
+
   end
 end
