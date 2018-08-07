@@ -1,6 +1,7 @@
 ---
-:enabled: 			true
-:test_msg: 			'running!'
-:bmi_endpoint: 		'http://google.com'
-:bmi_username: 		'user'
-:bmi_password: 		'pass'
+:enabled:	true
+:test_msg:	'running!'
+:bmi_endpoint:	'http://google.com'
+:bmi_username:	'user'
+:bmi_password:	'pass'
+:bmi_project:	'bmi_infra'
