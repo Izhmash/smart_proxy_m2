@@ -13,8 +13,9 @@ class M2ApiTest < Test::Unit::TestCase
     Proxy::M2::Api.new
   end
 
-  def test_returns_hello_greeting
-    # add test here
+  def test_returns_test_greeting
+    Proxy::M2::Plugin.load_test_settings('test_msg' => 'test')
+    assert get('/test').body == 'test'
   end
 
 end
