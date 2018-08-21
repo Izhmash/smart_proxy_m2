@@ -71,5 +71,4 @@ module Proxy::M2
       end
     end
   end
-
 end

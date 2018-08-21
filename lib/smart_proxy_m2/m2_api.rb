@@ -45,9 +45,5 @@ module Proxy::M2
       end
     end
 
-    get '/snapshot_list' do
-      Proxy::M2.get_snapshots(params[:project])
-    end
-
   end
 end
