@@ -1,0 +1,106 @@
+inherit_from:
+  - .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'doc/plugins/**'
+
+Rails:
+  Enabled: true
+
+Rails/Date:
+  Enabled: false
+
+# Don't enforce documentation
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 40
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 500
+  Exclude:
+       - 'test/**/*'
+
+Naming/FileName:
+  Exclude:
+      - 'db/seeds.d/*'
+
+Style/WordArray:
+  Enabled: false
+
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+       - 'config/routes.rb'
+       - 'test/**/*'
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+# a == 0 is not the same as a.zero?, when a is not a number
+Style/NumericPredicate:
+  Enabled: false
+
+Style/FormatStringToken:
+  EnforcedStyle: template
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Lint/BooleanSymbol:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Max: 11
+
+Metrics/AbcSize:
+  Max: 45
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

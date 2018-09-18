@@ -4,7 +4,6 @@ require 'smart_proxy_m2/m2_main'
 require 'json'
 
 module Proxy::M2
-
   class Api < ::Sinatra::Base
     include ::Proxy::Log
     helpers ::Proxy::Helpers
@@ -15,25 +14,25 @@ module Proxy::M2
 
     get '/image_list' do
       if params.key?(:project)
-			  Proxy::M2.get_images(params[:project])
+        Proxy::M2.get_images(params[:project])
       else
-			  Proxy::M2.get_images()
+        Proxy::M2.get_images
       end
     end
 
-		get '/iscsi_target' do
+    get '/iscsi_target' do
       if params.key?(:project)
-			  Proxy::M2.get_iscsi_target(params[:disk], params[:image], params[:project])
+        Proxy::M2.get_iscsi_target(params[:disk], params[:image], params[:project])
       else
-			  Proxy::M2.get_iscsi_target(params[:disk], params[:image])
+        Proxy::M2.get_iscsi_target(params[:disk], params[:image])
       end
     end
 
-		delete '/iscsi_target' do
+    delete '/iscsi_target' do
       if params.key?(:project)
-			  Proxy::M2.delete_disk(params[:disk], params[:project])
+        Proxy::M2.delete_disk(params[:disk], params[:project])
       else
-			  Proxy::M2.delete_disk(params[:disk])
+        Proxy::M2.delete_disk(params[:disk])
       end
     end
 
@@ -41,9 +40,8 @@ module Proxy::M2
       if params.key?(:project)
         Proxy::M2.get_snapshots(params[:project])
       else
-			  Proxy::M2.get_snapshots()
+        Proxy::M2.get_snapshots
       end
     end
-
   end
 end

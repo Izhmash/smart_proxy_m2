@@ -2,7 +2,7 @@ require 'rake'
 require 'rake/testtask'
 
 desc 'Default: run unit tests.'
-task :default => :test
+task default: :test
 
 desc 'Test M2 Plugin'
 Rake::TestTask.new(:test) do |t|
