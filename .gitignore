@@ -1,2 +1,4 @@
 *.gem
 update.sh
+*.lock
+*.gem
