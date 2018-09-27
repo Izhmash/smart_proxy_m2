@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.email = 'iballou@redhat.com'
   s.extra_rdoc_files = ['README.md', 'LICENSE']
   s.files = Dir['{lib,settings.d,bundler.d}/**/*'] + s.extra_rdoc_files
-  s.homepage = 'http://github.com/ianballou/smart_proxy_m2'
-  s.license = 'GPLv3'
+  s.homepage = 'https://github.com/ianballou/smart_proxy_m2'
+  s.license = 'GPL-3.0'
 end
